@@ -25,19 +25,6 @@
           Человеку важно питаться здоровой пищей, в разумных размерах. 
           Как правило самой полезной пищей являются фрукты и овощи.</pre></strong>
           </article>
-          <article class="CaloriesForm" title="Форма для рассчета каллорий.">
-          <form>
-                <legend>Форма для рассчета каллорий:</legend>
-                Name:<br>
-                <!--Создаем поле для ввода текста
-                Можем установить изначальное значение и имя-->
-                <input type="text" name="firstname" value="Mickey"><br>
-                Surname:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br><!--Пропускаем две строки-->
-                <input type="submit" value="Submit"><!--Добавляем кнопку для отправки данных.Submit(отправить)-->
-          </form>
-          </article>
           <article class="CaloriesDefinion" title="Что такое калории?"><strong><pre>
           Калории - энергетическая ценность пищи — количество энергии,
           получаемой организмом из продуктов питания. Согласно рекомендациям Всемирной 
@@ -56,9 +43,37 @@
           Средняя активность: A = 1,55.
           Высокая активность: A = 1,725.
           Экстра-активность: A = 1,9.</pre></strong>
-          <!--Кнопка для рассчета нормы калорий-->
-          <button type="button" id="CaloriesButton" onclick="CaloriesCounting()">Норма калорий</button>
           </article>
+          <form id="CaloriesForm" action="javascript:CaloriesCounting();">
+               <legend><strong>Форма для рассчета каллорий:</strong></legend>
+               <strong>Пол:</strong><br>
+               <!--Создаем поля для ввода персональной информации.-->
+               <input type="radio" id="Male" name="Gender" value="Male" checked><br>
+               <label for="Male"><strong>Мужчина</strong></label><br>
+               <input type="radio" id="Female" name="Gender" value="Female"><br>
+               <label for="Female"><strong>Женщина</strong></label><br>
+               <strong>Вес(кг):</strong><br>
+               <input type="text" id="Weight"><br>
+               <strong>Рост(см):</strong><br>
+               <input type="text" id="Growth"><br>
+               <strong>Возраст:</strong><br>
+               <input type="text" id="Age"><br>
+               <strong>Уровень физической активности:</strong><br>
+               <input type="radio" id="WeakActivity" name="ActivityLevel">
+               <label for="WeakActivity"><strong>Слабая активность</strong></label><br>
+               <input type="radio" id="MediumActivity" name="ActivityLevel" checked>
+               <label for="MediumActivity"><strong>Средняя активность</strong></label><br>
+               <input type="radio" id="NormalActivity" name="ActivityLevel">
+               <label for="NormalActivity"><strong>Нормальная активность</strong></label><br>
+               <input type="radio" id="HighActivity" name="ActivityLevel">
+               <label for="HighActivity"><strong>Высокая активность</strong></label><br>
+               <input type="radio" id="ExtraActivity" name="ActivityLevel">
+               <label for="ExtraActivity"><strong>Экстра-активность</strong></label><br>
+               <br><br><!--Пропускаем две строки-->
+               <input type="submit" value="Отправить"><!--Кнопка для рассчета нормы калорий-->
+               <strong>Полученный результат(норма калорий):</strong>
+               <strong id="Result"></strong>
+          </form>
       </section>
       <link rel="stylesheet" href="Style/Style.css">
    </body>
