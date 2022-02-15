@@ -1,0 +1,46 @@
+/*CSS (англ. Cascading Style Sheets, рус. Каскадные таблицы стилей) — специальный язык,
+который используется для описания внешнего вида страниц, написанных на HTML. 
+Спецификации CSS были созданы и развиваются Консорциумом Всемирной паутины - W3C.*/
+body {
+   background-color: powderblue;/*Устанавливаем темно голубой задний фон.*/
+   /*Шрифт по умолчанию*/
+   font-family: Georgia, Verdana, serif;/*Свойство font-family должно содержать несколько названий шрифтов в 
+   качестве «запасного варианта» системы. Чтобы обеспечить максимальную совместимость между браузерами/
+   операционными системами начните с желаемого шрифта и закончите общим семейством (чтобы браузер мог выбрать 
+   аналогичный шрифт из общего семейства, если другие шрифты недоступны). Названия шрифтов следует разделять
+   запятыми если они содержат более чем, одно слово. */
+}
+h1 {
+   text-align: center;/*Определяет горизонтальное выравнивание текста для HTML элемента: по центру.*/
+   color: blue;
+}
+.MainMenu {
+     padding-right: 50px;
+     padding-left: 50px;
+     font-size: 15px;
+     width: 790px;
+     height: 700px;
+     margin: auto;
+     background-color: black;
+}
+.WellnessDefinion {
+     color: gold;
+     background-color: royalblue;
+}
+.HealthyEating {
+     color: palegreen;
+     background-color: tomato;
+}
+.CalorisForm {display: none;}/*Скрываем форму.*/
+.CaloriesDefinion {
+     color: snow;
+     background-color: mediumseagreen;
+}
+#CaloriesButton {
+     width: 170px;
+     height: 35px;
+     border-radius: 5px;
+     font-weight: bold;
+     color: lime;
+     background-color: tomato;
+}
